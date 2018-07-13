@@ -6,7 +6,7 @@ source('pamr.plotcv.R')
 source('pamr.plotcen.R')
 
 #Read dataset
-khan.data <- pamr.from.excel(argv[0], 69, sample.labels=TRUE)
+khan.data <- pamr.from.excel(argv[0], sample.number, sample.labels=TRUE)
 lapply(khan.data, function(x) replace(x, is.nan(x), 0))
 
 ##Train the classifier
